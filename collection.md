@@ -6,24 +6,27 @@
 5. navigateTo 新页面, 老页面生命周期不会结束(?最多几层)
 6. 页面样式页面间样式屏蔽, app.(less|wxss)各处生效
 7. 渲染层逻辑层分开, 逻辑层选取/操作dom元素约等于woker里发消息给主线程再去操作dom(?)
-8. canvas节点异步插入/display方式控制显隐时, 绘制会提示找不到canvas(?应该跟页面生命周期无关)
-9. wxs....
-10. 待了解 Web Components, web worker, 样式变量env(....) var(..)
-11. 待实施 分包、页面状态保留、初始渲染缓存、sitemap等等
-12. ts模式下默认类型貌似更新不及时, 与文档脱节(?如RenderingContext)
-13. 进入后台/非激活状态, 多久会销毁(?文档30min)
-14. 跨平台问题
+8. 所有的逻辑层代码在同一全局(上下文)下(?), 各处都可以访问app对象下的变量方法等....
+9. canvas节点异步插入/display方式控制显隐时, 绘制会提示找不到canvas(?即使在ready中,应该跟页面生命周期无关)
+10. wxs....
+11. 待了解 Web Components, web worker, 样式变量env(....) var(..)
+12. 待实施 分包、页面状态保留、初始渲染缓存、sitemap等等
+13. ts模式下默认类型貌似更新不及时, 与文档脱节(?如RenderingContext)
+14. 进入后台/非激活状态, 多久会销毁(?文档30min)
+15. 跨平台问题
   - 页面title居中
   - 未指定/指定未引入(?记不清了)导致文字乱码
   - 其他ing
-15.  文档问题
+16.    文档问题
   - 检索太难用, 上个algolia吧
   - 与实际api脱节, 如canvas离屏渲染createOffscreenCanvas(?)
-16. ing
+17.   ing
 ### 其他
 1. 通过环境变量绕过部分关键词/功能审核
 2. canvas绘制存在绘制模糊的问题, 缩放属性scale不够灵活(?貌似对图片绘制不生效), 海报一类无交互场景, 可先canvas固定尺寸绘制转临时文件, 以image展示
-3. ing
+3. canvas绘制文字设置textBaseline已左上角为位置基点;圆角矩形、多边形等用path实现
+4. 获取(createSelectorQuery().select)canvas对象后需要手动设置canvas宽高
+5. ing
 
 
 ~~~React大法好, 放飞自我首选~~~
