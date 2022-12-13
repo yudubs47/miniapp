@@ -8,20 +8,21 @@
 7. "navigationStyle": "custom" 首个子元素margin-top等不生效(?)
 8. 渲染层逻辑层分开, 逻辑层选取/操作dom元素约等于woker里发消息给主线程再去操作dom(?)
 9. 所有的逻辑层代码在同一全局(上下文)下(?), 各处都可以访问app对象下的变量方法等....
-10. canvas节点异步插入/display方式控制显隐时, 绘制会提示找不到canvas(?即使在ready中,应该跟页面生命周期无关)
-11. wxs....
-12. 待了解 Web Components, web worker, 样式变量env(....) var(..)
-13. 待实施 分包、页面状态保留、初始渲染缓存、sitemap等等
-14. ts模式下默认类型貌似更新不及时, 与文档脱节(?如RenderingContext)
-15. 进入后台/非激活状态, 多久会销毁(?文档30min)
-16. 跨平台问题
+10. wx.uploadFile name字段含义(?貌似后端约定), 返回的报文json字符串
+11. canvas节点异步插入/display方式控制显隐时, 绘制会提示找不到canvas(?即使在ready中,应该跟页面生命周期无关)
+12. wxs....
+13. 待了解 Web Components, web worker, 样式变量env(....) var(..)
+14. 待实施 分包、页面状态保留、初始渲染缓存、sitemap等等
+15. ts模式下默认类型貌似更新不及时, 与文档脱节(?如RenderingContext)
+16. 进入后台/非激活状态, 多久会销毁(?文档30min)
+17. 跨平台问题
   - 页面title居中
   - 未指定/指定未引入(?记不清了)导致文字乱码
   - 其他ing
-17.     文档问题
+18.      文档问题
   - 检索太难用, 上个algolia吧
   - 与实际api脱节, 如canvas离屏渲染createOffscreenCanvas(?)
-18.    ing
+19.     ing
 ### 其他
 1. 通过环境变量绕过部分关键词/功能审核
 2. canvas绘制存在绘制模糊的问题, 缩放属性scale不够灵活(?貌似对图片绘制不生效), 海报一类无交互场景, 可先canvas固定尺寸绘制转临时文件, 以image展示
